@@ -1,21 +1,44 @@
-This repository contains the code and resources for training a machine learning model to automatically tag coding-related questions with relevant tags.
+# Automatic Tagging of Coding-Related Questions
 
-Overview
-The goal of this project is to develop a model that can classify coding-related questions into predefined tags or categories. This can be useful for organizing and categorizing questions on coding forums, Q&A websites, or support platforms.
+This repository contains the code and resources to train a machine learning model for tagging coding-related questions with predefined categories. It’s designed to improve the organization of questions on coding forums, Q&A platforms, and support websites.
 
-Dataset
-We used a dataset consisting of coding-related questions collected from GitHub.The dataset includes questions along with their corresponding tags or labels.
+---
 
-Model Architecture
-We employed a Support Vector Machine (SVM) classifier for this task. The model uses a TF-IDF vectorizer to convert text data into numerical features and then trains a linear SVM classifier on these features.
+## Overview
 
-Model Training
-The training process involves the following steps:
+The project leverages a **Support Vector Machine (SVM)** classifier combined with **TF-IDF vectorization** to classify coding-related questions into relevant tags.
 
-Data Preprocessing: The text data is preprocessed to remove noise, perform tokenization, remove stopwords, and perform lemmatization.
+---
 
-Feature Extraction: Text data is converted into numerical features using the TF-IDF (Term Frequency-Inverse Document Frequency) vectorization technique.
+## Dataset
 
-Model Training: The preprocessed and vectorized data is used to train a linear SVM classifier.
+- Source: Coding-related questions collected from GitHub.
+- Structure: Questions paired with their corresponding tags.
 
-Model Evaluation: The trained model is evaluated on a separate validation set to assess its performance in terms of accuracy and other relevant metrics.
+---
+
+## Model Architecture
+
+1. **TF-IDF Vectorization**: Converts text data into numerical features.
+2. **SVM Classifier**: A linear model trained on the vectorized data for tag prediction.
+
+---
+
+## Training Pipeline
+
+1. **Data Preprocessing**:
+   - Noise removal
+   - Tokenization
+   - Stopword removal
+   - Lemmatization
+
+2. **Feature Extraction**:
+   - TF-IDF vectorization for numerical representation.
+
+3. **Model Training**:
+   - Linear SVM classifier trained on preprocessed data.
+
+4. **Evaluation**:
+   - Performance measured on a validation set using metrics like accuracy, precision, and recall.
+
+---
